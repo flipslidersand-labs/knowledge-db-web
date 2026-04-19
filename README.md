@@ -43,9 +43,17 @@ npm start
 
 ### Vercel へのデプロイ
 
+1. [Vercel](https://vercel.com) にログイン
+2. GitHub リポジトリをインポート
+3. Environment Variables を設定：
+   - `NEXT_PUBLIC_API_URL` = Render API の本番 URL
+
 ```bash
-vercel
+# ローカルからデプロイ（初回は対話的）
+vercel --prod
 ```
+
+4. デプロイ完了後、URL が表示されます
 
 ## 構成
 
