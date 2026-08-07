@@ -3,7 +3,7 @@
   publish = ".next"
 
 [build.environment]
-  NEXT_PUBLIC_API_URL = "https://knowledge-db-api.onrender.com/api"
+  NEXT_PUBLIC_API_URL = "https://kb-api.ordeamo.com/api"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
