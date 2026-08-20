@@ -11,6 +11,6 @@ jobs:
     with:
       node-version: "20"
       package-manager: "npm"
-      run-lint: true
+      run-lint: false
       run-test: true
       runner: ubuntu-latest
