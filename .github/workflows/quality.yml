@@ -1,0 +1,15 @@
+name: Quality
+
+on:
+  push:
+    branches: [main, "feat/**", "fix/**"]
+  pull_request:
+
+jobs:
+  quality:
+    uses: flipslidersand-labs/qa-workflows/.github/workflows/node-test.yml@main
+    with:
+      node-version: "20"
+      package-manager: "npm"
+      run-lint: true
+      run-test: true
