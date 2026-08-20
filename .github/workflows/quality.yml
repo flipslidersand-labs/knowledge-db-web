@@ -13,3 +13,4 @@ jobs:
       package-manager: "npm"
       run-lint: true
       run-test: true
+      runner: ubuntu-latest
