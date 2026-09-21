@@ -41,19 +41,15 @@ npm run build
 npm start
 ```
 
-### Vercel へのデプロイ
+### GitHub Pages へのデプロイ
 
-1. [Vercel](https://vercel.com) にログイン
-2. GitHub リポジトリをインポート
-3. Environment Variables を設定：
-   - `NEXT_PUBLIC_API_URL` = Render API の本番 URL
+`main` ブランチへの push で `.github/workflows/deploy.yml` が自動的に静的ビルド
+（`next.config.ts` の `output: "export"`）を実行し、GitHub Pages へデプロイする。
 
-```bash
-# ローカルからデプロイ（初回は対話的）
-vercel --prod
-```
+公開URL: https://flipslidersand-labs.github.io/knowledge-db-web/
 
-4. デプロイ完了後、URL が表示されます
+手動実行する場合は Actions タブから `Deploy to GitHub Pages` workflow を
+`workflow_dispatch` で起動する。
 
 ## 構成
 
