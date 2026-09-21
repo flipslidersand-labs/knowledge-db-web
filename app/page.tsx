@@ -23,11 +23,17 @@ interface SearchResponse {
   response_ms: number;
 }
 
+interface StatsData {
+  total_documents: number;
+  source_types: number;
+  days_covered: number;
+}
+
 export default function Home() {
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [stats, setStats] = useState<any>(null);
+  const [stats, setStats] = useState<StatsData | null>(null);
   const [searchData, setSearchData] = useState<SearchResponse | null>(null);
 
   useEffect(() => {
