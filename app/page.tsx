@@ -37,18 +37,17 @@ export default function Home() {
   const [searchData, setSearchData] = useState<SearchResponse | null>(null);
 
   useEffect(() => {
+    const fetchStats = async () => {
+      try {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/stats`);
+        const data = await res.json();
+        setStats(data.data);
+      } catch (err) {
+        console.error('Failed to fetch stats:', err);
+      }
+    };
     fetchStats();
   }, []);
-
-  const fetchStats = async () => {
-    try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/stats`);
-      const data = await res.json();
-      setStats(data.data);
-    } catch (err) {
-      console.error('Failed to fetch stats:', err);
-    }
-  };
 
   const handleSearch = async (query: string) => {
     setLoading(true);
