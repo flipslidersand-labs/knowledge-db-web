@@ -1,5 +1,7 @@
 # Knowledge DB - Web Frontend
 
+Release type: `site`
+
 Next.js + Tailwind CSS で構築された Knowledge DB の検索フロントエンド。
 
 ## 機能
